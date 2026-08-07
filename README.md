@@ -10,7 +10,7 @@ This project analyzes the 2016 OSMI Mental Health in Tech Survey to explore how 
 
 **Analyst:** BreeAnna Malone
 
-**Date completed:** [TODO — update once repo/charts are finalized]
+**Date completed:** August 7, 2026
 
 ## Data Cleaning Notes
 
@@ -49,10 +49,10 @@ The "among respondents to this survey" framing is intentional — see **Limitati
 
 | Predictor | Low | High | Spread |
 |---|---|---|---|
-| Know options | 31.0% | 46.3% | 15.3 pts |
 | Observed negative consequences | 23.7% (true) | 38.5% (false) | 14.8 pts |
-| Formal discussion offered | 30.7% | 57.6% | 26.9 pts |
-| **Anonymity protected** | 23.8% | 54.9% | **31.1 pts (strongest)** |
+| **Formal discussion offered** | 30.7% | 57.6% | **26.9 pts (strongest standalone predictor)** |
+
+*Note: unlike 3b and Q4, awareness of options was not tested as a standalone predictor for supervisor comfort at the current employer — only anonymity (via the two-way deep-dive below) and formal discussion were run.*
 
 **Two-way deep-dive:** Does anonymity protection offset having personally observed negative consequences? Within the "observed consequences" group (worst-case baseline, 23.7% comfort), anonymity protection nearly triples comfort (up to 46.2%) — but that ceiling still falls short of the 55.6% ceiling for the "no observed consequences" group. **Conclusion: policy helps significantly, but doesn't fully substitute for a track record of safety.**
 
@@ -103,18 +103,21 @@ Nearly identical ranking to 3a — reinforces that this isn't a one-off pattern 
 
 ## Files in This Repository
 
-[TODO — finalize once all queries/charts are confirmed saved to the repo]
 
 | File | Description |
 |---|---|
 | `osmi_data_cleaning.ipynb` | Python data cleaning pipeline |
-| `sql/Q1a_.../` | Business Impact — self-employed branch |
-| `sql/Q1b_.../` | Business Impact — employed branch (UNPIVOT) |
-| `sql/Q2a_.../` | High-Risk Segment — current employer |
-| `sql/Q2b_.../` | High-Risk Segment — previous employer |
-| `sql/Q3a_.../` | Friction Points — current employer (4 single-variable + two-way deep-dive) |
-| `sql/Q3b_.../` | Friction Points — previous employer (4 single-variable) |
-| `sql/Q4_success_drivers/Q4_coworker_comfort_vs_predictors.sql` | Success Drivers — coworker comfort |
+| `sql/Query_1a_1b_business_impact/Q1a_business_impact_self_employed/` | Business Impact — self-employed branch |
+| `sql/Query_1a_1b_business_impact/Q1b_business_impact_employed/` | Business Impact — employed branch (UNPIVOT) |
+| `sql/Query_2a_2b_highrisk_segment/Q2a_highrisk_segment_current_employer/` | High-Risk Segment — current employer |
+| `sql/Query_2a_2b_highrisk_segment/Q2b_results_high_risk_segment_previous_employer/` | High-Risk Segment — previous employer |
+| `sql/Query_3ai-3biv_friction_points/Q3ai_supervisor_comfort_anonymity_formal_discussion_current/` | Friction Points — current employer, two-way deep-dive (consequences x anonymity) |
+| `sql/Query_3ai-3biv_friction_points/Q3aii_formal_discussion_vs_comfort_current/` | Friction Points — current employer, formal discussion vs. supervisor comfort |
+| `sql/Query_3ai-3biv_friction_points/Q3bi_know_option_vs_willingness_previous/` | Friction Points — previous employer, know options vs. willingness |
+| `sql/Query_3ai-3biv_friction_points/Q3bii_anonymity_protected_previous_vs_willingness/` | Friction Points — previous employer, anonymity vs. willingness |
+| `sql/Query_3ai-3biv_friction_points/Q3biii_formal_discussion_offered_vs_willingness_previous/` | Friction Points — previous employer, formal discussion vs. willingness |
+| `sql/Query_3ai-3biv_friction_points/Q3biv_observed_negative_consequences_vs_willingness_previous/` | Friction Points — previous employer, observed consequences vs. willingness |
+| `sql/Query_4_coworker_comfort/` | Success Drivers — coworker comfort |
 | [TODO] | Tableau dashboard links/screenshots |
 
 ## Insights & Recommendations

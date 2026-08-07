@@ -1,0 +1,17 @@
+has_mh_disorder_current,treatment_status,interference_level,respondent_count
+Yes,Treated,Sometimes,220
+Yes,Treated,Rarely,201
+Maybe,Treated,Sometimes,93
+Maybe,Treated,Rarely,79
+Yes,Treated,Never,64
+Yes,Treated,Often,53
+Maybe,Treated,Never,25
+Maybe,Treated,Often,11
+Yes,Untreated,Often,385
+Yes,Untreated,Sometimes,157
+Maybe,Untreated,Sometimes,144
+Maybe,Untreated,Often,99
+Maybe,Untreated,Rarely,23
+Yes,Untreated,Rarely,16
+Maybe,Untreated,Never,7
+Yes,Untreated,Never,2
